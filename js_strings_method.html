@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+    
+    <!-- JS String Slice() -->
+
+    <h1>JavaScript String Methods</h1>
+
+    <p><b>The slice() method extract a part of a string 
+        and returns the extracted parts in a new string.
+    </b></p>
+
+    <p id="demo"></p>
+
+    <script>
+        let str = "Apple, Banana, Kiwi";
+        document.getElementById('demo').innerHTML = str.slice(7,13)
+    </script>
+
+<!-- Negative Values -->
+<p id="one"></p>
+
+<script>
+    let text = "Apple,Banana, Kiwi";
+    document.getElementById("one").innerHTML = str.slice(-12,-6)
+</script>
+
+
+<!-- Replace Method -->
+<p><b>Replace "Microsoft" with "W3Schools" in the paragraph below:</b></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="two">Please visit Microsoft</p>
+
+<script>
+    function myFunction() {
+        let line = document.getElementById('two').innerHTML;
+        document.getElementById('two').innerHTML =line.replace("Microsoft", "W3Schools");
+    }
+</script>
+
+
+<!-- Converting to Uppercase -->
+<h2>Convert string to uppercase:</h2>
+
+<button onclick="myUppercase()">Try it</button>
+
+<p id="three">Hello World!</p>
+
+<script>
+    function myUppercase() {
+        var hello = document.getElementById('three').innerHTML;
+        document.getElementById('three').innerHTML = hello.toUpperCase();
+    }
+</script>
+
+<!-- Converting to lowercase -->
+<h2>Convert string to lowercase</h2>
+
+<button onclick="myLowercase()">Try it</button>
+
+<p id="four">LOREM IPSUM</p>
+
+<script>
+    function myLowercase() {
+        var lorem = document.getElementById('four').innerHTML;
+        document.getElementById('four').innerHTML = lorem.toLowerCase();
+    }
+</script>
+
+<!-- The concat() method -->
+<p><b>The concat() method joins two or more strings:</b></p>
+
+<p id="five"></p>
+
+<script>
+    let text1 = "Hello";
+    let text2 = "World";
+    let text3 = text1.concat(" ",text2);
+    document.getElementById('five').innerHTML = text3;
+</script>
+
+
+<!-- The trim() method -->
+<h2>The trim() Method</h2>
+
+<p id="six"></p>
+
+<script>
+    let sent1 = "      Hello World!          ";
+    let sent2 = text.trim();
+
+    document.getElementById('six').innerHTML = 
+    "Length sent1 =" + sent1.length + "<br>Length2 sent2 =" + sent2.length;
+</script>
+
+
+<!-- JS String padStart() -->
+<p><b>The padStart() method pads a string with another string</b></p>
+
+<p id="seven"></p>
+
+<script>
+    let pad = "5";
+    document.getElementById('seven').innerHTML = pad.padStart(4,0);
+</script>
+
+<!-- JS String padEnd () -->
+<p><b>The padEnd() method pads a string with another string</b></p>
+
+<p id="eight"></p>
+
+<script>
+    let end ="5";
+    document.getElementById('eight').innerHTML = end.padEnd(4,0);
+</script>
+
+<!-- Extracting String Chracters -->
+<p><b>The charAt() method returns the character at a given position 
+    in a string </b></p>
+
+    <p id="nine"></p>
+
+    <script>
+        var world = "HELLO WORLD";
+        document.getElementById('nine').innerHTML = text.charAt(0);
+    </script>
+
+<!-- charCodeAt() method -->
+<p><b>The charCodeAt() method return the unicode of the character at a 
+    given position in a string:
+</b></p>
+
+<p id="ten"></p>
+
+<script>
+    let code = "HELLO WORLD";
+    document.getElementById('ten').innerHTML = code.charCodeAt(0);
+</script>
+
+<!-- Property Access [] -->
+<p><b>ECMAScript 5 allows property access on strings:</b></p>
+
+<p id="eleven"></p>
+
+<script>
+    var prop = "HELLO WORLD";
+    document.getElementById('eleven').innerHTML = prop[0];
+</script>
+
+
+</body>
+</html>

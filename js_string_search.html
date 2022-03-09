@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Search</title>
+</head>
+<body>
+    
+    <h1>JavaScript String Search Methods</h1>
+
+    <p>The indexOf() method returns the position of the first occurence of a 
+        specified text:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+        let str = "Please locate where 'locate' occurs!";
+        document.getElementById('demo').innerHTML = str.indexOf("locate"); 
+    </script>
+
+<!-- lastIndexOf Method -->
+<p><b>The lastIndexOf method returns the position of the last  occurence 
+    of a specified text:
+</b></p>
+
+<p id="one"></p>
+
+<script>
+    let ln1 = "Please locate where last occurs!";
+    document.getElementById('one').innerHTML = ln1.lastIndexOf("last")
+</script>
+
+<!-- Second Parameter -->
+<p><b>The indexOf() method accepts a second parameter as the satrting position for 
+    the search:
+</b></p>
+
+<p id="two"></p>
+
+<script>
+    let ln2 = "Please come to our place tomorrow to clarify the on matter";
+    document.getElementById('two').innerHTML = ln2.indexOf("to",20)
+</script>
+
+ <p>The lastIndexOf() method accepts a second parameter as the starting 
+     position for the search.
+ </p>
+<p>Remember that the lastIndexOf() method searches backwards, so position37 means start the search at position 37, and the search to the beginning.</p>
+<p>Position 37is position 37 from the beginning.</p>
+
+<p id="three"></p>
+
+<script>
+    let ln3 = "Fear leads to anger, anger leads to hatred!";
+    document.getElementById('three').innerHTML = ln3.lastIndexOf("to",37);
+</script>
+
+<!-- Search Method -->
+<p><b>The search() method returnns the position of the first occurence of a 
+    specified text in a string:
+</b></p>
+
+<p id="four"></p>
+
+<script>
+    let ln4 = "Let it snow, let it snow, let it snow!";
+    document.getElementById('four').innerHTML = ln4.search("snow");
+</script>
+
+<!-- Includes() Method -->
+<p><b>Check if a string includes "world":</b></p>
+
+<p id="five"></p>
+
+<script>
+    let ln5 = "Hello world, welcome to the uiverse.";
+    document.getElementById('five').innerHTML = ln5.includes("world");
+</script>
+
+<!-- startsWith() Method -->
+<p>Check if a string starts with "Hello":</p>
+
+<p id="six"></p>
+
+<p>The startsWith() method is not supported in Internet Explorer</p>
+
+<script>
+    let ln6 = "Lorem Ipsum";
+    document.getElementById('six').innerHTML = ln6.startsWith("Lorem")
+</script>
+
+<!-- endsWith() Method-->
+<p>Check if a string ends with "Doe": </p>
+
+<p id="seven"></p>
+
+<script>
+    let ln7 = "John Doe";
+    document.getElementById('seven').innerHTML = ln7.endsWith("Doe");
+</script>
+
+
+
+</body>
+</html>

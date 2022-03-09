@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+</head>
+<body>
+    
+
+    <h1>JavaScript Arrays</h1>
+
+    <p>JavaScript array elements are acessed using numeric indexes (stating from 0). </p>
+
+    <p id="demo"></p>
+
+    <script>
+        var cars = ["Saab", "Volvo", "BMW"];
+        cars[1] = "Opel"
+        document.getElementById('demo').innerHTML = cars[1];
+    </script>
+<!-- The length property -->
+    <p><b>The length property returns the length of an array.</b></p>
+
+    <p id="one"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById('one').innerHTML = fruits.length + "<br>"+
+        fruits[fruits.length- 1];
+    </script>
+
+    <!-- Looping through elements -->
+    <p><b>The best way to loop through an array is using a standard for loop: </b></p>
+
+    <p id="two"></p>
+
+    <script>
+        var fruits, text, flen, i;
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        flen = fruits.length;
+
+        text = "<ul>"
+            for (i = 0; i < flen; i++) {
+                text += "<li>" + fruits[i] + "</li>";
+            }
+            text += "</ul>";
+
+            document.getElementById('two').innerHTML = text;
+    </script>
+
+    <!-- Array.forEach() -->
+    <p><b>Array.forEach() calls a function for each array element.</b></p>
+
+    <p id="three"></p>
+
+    <script>
+        var fruits,text;
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+        document.getElementById('three').innerHTML = text;
+
+        function myFunction(value) {
+            text += "<li>" + value + "</li>";
+        }
+    </script>
+
+<!-- Adding Array Elements -->
+<p><b>Th push method appeds a new element to a array.</b></p>
+
+<button onclick="addElement()">Try it</button>
+
+<p id="four"></p>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById('four').innerHTML = fruits;
+
+    function addElement() {
+        fruits.push("Lemon");
+        document.getElementById('four').innerHTML = fruits;
+    }
+</script>
+
+<!-- How to recognize an array -->
+<!-- Solution 1 -->
+<h1>How recognize an array?</h1>
+<p id="five"></p>
+
+<script>
+    const  matunda = ["Banana", "Orange", "Apple"];
+    document.getElementById('five').innerHTML = Array.isArray(matunda);
+</script>
+
+<!-- Solution 2 -->
+<p><b>The instanceOf operator returns true when used on an array:</b></p>
+
+<p id="six"></p>
+
+<script>
+    var fruits =["Banana", "Orange", "Apple"];
+    document.getElementById('six').innerHTML = fruits instanceof Array;
+</script>
+
+</body>
+</html>

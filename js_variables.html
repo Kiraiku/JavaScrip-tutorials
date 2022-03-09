@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+<body>
+
+    <h1>JavaScript Variables</h1>
+
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let w = 5;
+        let y = 6;
+        z = w + y;
+        document.getElementById('demo').innerHTML =
+         "The value of z is: " + z;
+    </script>
+
+<!-- When to use javaScript constant  -->
+<p><b>The two variables price1 and price2 are declared with the const keyword.
+
+    These are constant values and cannot be changed.</b></p>
+
+<p id="price"></p>
+
+<script>
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+    document.getElementById('price').innerHTML = 
+    "The total is: " + total;
+</script>
+
+<!-- JS Data Types -->
+<p>Strings sre written with quotes.</p>
+<p>Numbers are written without quotes</p>
+
+<p id="type"></p>
+
+<script>
+    const pi = 3.14;
+    let person = "John Doe"
+    let answer = 'Yes I am!'
+
+    document.getElementById('type').innerHTML =
+    pi + "<br>" + person + "<br>" + answer;
+</script>
+   
+<!-- JS Arithmetic. -->
+<p>The result of adding 5 + 2 + 3 is:</p>
+<p id="metic"></p>
+
+<script>
+    let x = 5 + 2 + 3;
+    document.getElementById("metic").innerHTML = x;
+</script>
+
+<!-- JS Dollar Sign -->
+<p>The dollar sign is treated as a letter in JavScript names.</p>
+
+<p id="lar"></p>
+
+<script>
+    let $$$ = 2;
+    let $myMoney = 5;
+    document.getElementById('lar').innerHTML = 
+    $$$ + $myMoney;
+</script>
+
+
+</body>
+</html>

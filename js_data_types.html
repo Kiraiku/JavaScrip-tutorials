@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+
+
+    <h1>JavaScript Data Types</h1>
+
+    <p>JavaScript has dynamic types. This means that the same variable can be 
+        used to hold different data types:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x;  //Now x is undefined
+        x = 5;   // Now x is a Number
+        x = "John";  //Now x is a String
+
+        document.getElementById('demo').innerHTML = x;
+
+    </script>
+
+    <!-- JS Numbers -->
+    <h2>JavaScript Numbers</h2>
+
+    <p>Numbers can be written with or without decimals:</p>
+
+    <p id="one"></p>
+
+    <script>
+        let x1 = 34.00;
+        let x2 = 34;
+        let x3 = 3.14;
+
+        document.getElementById('one').innerHTML =
+        x1 + "<br>" + x2 + "<br>" + x3;
+    </script>
+
+    <p><b>Extra large or extra small numbers can be written with scientific 
+        (exponential) notation:
+    </b></p>
+
+    <p id="two"></p>
+
+    <script>
+        let a = 123e5;
+        let b = 123e-5;
+
+        document.getElementById('two').innerHTML = 
+        a + "<br>" + b;
+    </script>
+    
+
+    <!-- JS Booleans -->
+    <p><b>Booleans can have two values:true or false
+    </b></p>
+
+    <p id="three"></p>
+
+    <script>
+        let d = 5;
+        let e = 5;
+        let f = 6;
+
+        document.getElementById('three').innerHTML = 
+        (d==e) + "<br>" + (e==f);
+    </script>
+
+<!-- JavaScript Arrays -->
+<p><b>Array indexes are zero-based, which means the first item is[0].</b></p>
+
+<p id="four"></p>
+
+<script>
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    document.getElementById('four').innerHTML = cars[1]
+</script>
+
+
+<!-- JS Objects -->
+<p id="five"></p>
+
+<script>
+    const person = {
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    };
+
+    document.getElementById('five').innerHTML = 
+    person.firstName + " is " + person.age + " years old.";
+</script>
+
+
+
+</body>
+</html>

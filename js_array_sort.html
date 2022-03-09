@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Sort</title>
+</head>
+<body>
+
+    <h1>JavaScript Array Sort</h1>
+    <p>The sort() method sorts an array alphabetically:</p>
+    <p>The reverse() method reverses the elements in an array</p>
+    <p>By combining sort() and reverse() you can start an array in descending 
+        order:
+    </p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        //Create and display an array:
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById('demo1').innerHTML = fruits;
+
+        //First sort the array:
+        fruits.sort();
+
+        //Then reverse it:
+        fruits.reverse();
+
+        document.getElementById('demo2').innerHTML = fruits;
+
+    </script>
+
+<!-- Numeric Sort -->
+<p><b>Sort numerics in an array in ascending order:</b></p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById('demo3').innerHTML = points;
+
+    points.sort(function(a, b){return a - b});
+    document.getElementById('demo4').innerHTML = points;
+</script>
+
+<!-- Sorting an arra in a random order -->
+<p><b>Click the button (again and again) to sort the array in random order.</b></p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="one"></p>
+
+<script>
+    const items = [40, 100, 1, 5, 25, 10];
+    document.getElementById('one').innerHTML =items;
+
+    function myFunction() {
+        items.sort(function(a, b){return 0.5 - Math.random()});
+        document.getElementById('one').innerHTML = items;
+    }
+</script>
+
+<!-- Fisher Yates Method -->
+<h2>The Fisher Yates Method</h2>
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myRandom()">Try it</button>
+<p id="two"></p>
+
+<script>
+    const random = [40, 100, 1, 5, 25, 10];
+    document.getElementById('two').innerHTML = random;
+
+    function myRandom() {
+        for (let i = random.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random() * i)
+            let k = random[i]
+            random[i] = random[j]
+            random[j] = k
+        }
+        document.getElementById('two').innerHTML = random;
+    }
+</script>
+
+
+<!-- Finding the Highest (or lowest)Array value -->
+<h2>Using Math.max() on an Array</h2>
+<p>The highest number is <span id="three"></span></p>
+
+<script>
+    const digits = [40, 100, 1, 5, 25, 10];
+    document.getElementById('three').innerHTML = myArrayMax(digits);
+
+    function  myArrayMax(arr) {
+        return Math.max.apply(null,arr);
+    }
+</script>
+
+<h2>Using Math.min() on an array</h2>
+
+<p>The lowest number is <span id="four"></span></p>
+
+<script>
+    const tel = [40, 100, 1, 5, 25, 10];
+    document.getElementById('four').innerHTML = myArrayMin(tel);
+
+    function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Methods</title>
+</head>
+<body>
+    
+
+    <h1>JavaScript number Methods</h1>
+
+    <p>The toString() method converts a number to a string.</p>
+
+    <p id="one"></p>
+
+    <script>
+        var x = 123;
+        document.getElementById('one').innerHTML = 
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+    </script>
+
+<!-- The toExpnential() method -->
+    <p><b>The toExponential() method returns a string, with the umber rounded
+        and wrttien using exponential notation.
+    </b></p>
+
+    <p>An optional parameter defines he number of digits behind he 
+        decimal point.
+    </p>
+
+    <p id="two"></p>
+
+    <script>
+        var x = 9.656;
+        document.getElementById('two').innerHTML = 
+        x.toExponential() + "<br>" +
+        x.toExponential(2) + "<br>" +
+        x.toExponential(4) + "<br>" +
+        x.toExponential(6);
+
+    </script>
+
+    <!-- toFixed() method -->
+    <p><b>The toFixed() method rounds a number to a given number of digits.</b></p>
+    <p>For working with money, toFixed(2) is perfect.</p>
+
+    <p id="three"></p>
+
+    <script>
+        var x = 9.656;
+        document.getElementById('three').innerHTML = 
+        x.toFixed(0) + "<br>" +
+        x.toFixed(2) + "<br>" +
+        x.toFixed(4) + "<br>" +
+        x.toFixed(6);
+    </script>
+
+    <!-- toPrecision() method -->
+    <p><b>The toPrecision() method returns a string, with a number written with a specified lenght:</b></p>
+
+    <p id="four"></p>
+
+    <script>
+        var x = 9.656;
+        document.getElementById('four').innerHTML = 
+        x.toPrecision() + "<br>" +
+        x.toPrecision(2) + "<br>" +
+        x.toPrecision(4) + "<br>" +
+        x.toPrecision(6);
+    </script>
+
+<!-- valueOf() method -->
+<p><b>The valueOf() method returns a number as a number:</b></p>
+
+<p id="five"></p>
+
+<script>
+    var x = 123;
+
+    document.getElementById("five").innerHTML = 
+    x.valueOf() + "<br>" +
+    (123).valueOf() + "<br>" +
+    (100 + 23).valueOf();
+
+</script>
+
+<!-- number() method -->
+<p><b>The Number() method converts variables to numbers:</b></p>
+
+<p id="six"></p>
+
+<script>
+    document.getElementById('six').innerHTML = 
+    Number(true) + "<br>" +
+    Number(false) + "<br>" +
+    Number("10") + "<br>" +
+    Number("  10") + "<br>" +
+    Number("10   ") + "<br>" +
+    Number(" 10  ") + "<br>" +
+    Number("10.33") + "<br>" +
+    Number("10,33") + "<br>" +
+    Number("10 33") + "<br>" +
+    Number("John");
+
+</script>
+
+<!-- parseInt() method -->
+<p><b>The global JavaScript function parseInt() converts string to
+    numbers:
+</b></p>
+
+<p id="seven"></p>
+
+<script>
+    document.getElementById('seven').innerHTML = 
+    parseInt("10") + "<br>" +
+    parseInt("10.33") + "<br>" +
+    parseInt("10 6") + "<br>" +
+    parseInt("10 years") + "<br>" +
+    parseInt("years 10");
+ </script>
+
+ <!-- parseFloat() method -->
+ <p><b>The parseFloat() method converts strings to numbers:</b></p>
+
+ <p id="eight"></p>
+
+ <script>
+     document.getElementById('eight').innerHTML = 
+     parseFloat("10") + "<br>" + 
+     parseFloat("10.33") + "<br>" + 
+     parseFloat("10 6") + "<br>" + 
+     parseFloat("10 years") + "<br>" +
+     parseFloat("years 10");
+ </script>
+
+<h1>JavaScript Number Object Properties</h1>
+
+<p>MAX_VALUE returns the largest possible number in JavaScript</p>
+
+<p id="nine"></p>
+
+<script>
+    var x = Number.MAX_VALUE;
+    document.getElementById('nine').innerHTML = x;
+</script>
+
+<p>MIN_VALUE returns the smalest number possible in JavaScript.</p>
+
+<p id="ten"></p>
+
+<script>
+    var x = Number.MIN_VALUE;
+    document.getElementById('ten').innerHTML =x;
+</script>
+
+<p><b>POSITIVE INFINITY</b></p>
+
+<p id="eleven"></p>
+
+<script>
+    var y = Number.POSITIVE_INFINITY;
+    document.getElementById('eleven').innerHTML =y;
+</script>
+
+<p><b>NEGATIVE_INFINITY</b></p>
+
+<p id="twelve"></p>
+
+<script>
+    var x = Number.NEGATIVE_INFINITY;
+    document.getElementById('twelve').innerHTML =x;
+</script>
+
+
+</body>
+</html>

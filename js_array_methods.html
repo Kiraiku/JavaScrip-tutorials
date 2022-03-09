@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Methods</title>
+</head>
+<body>
+
+    <!-- Converting Arrays to Strings -->
+    <h1>JavaScript Array Methods</h1>
+    <h2>toString()</h2>
+    <p>The toString() method returns an array as a comma separated string:</p>
+    
+    <p id="demo"></p>
+
+    <script>
+        const   fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById('demo').innerHTML = fruits.toString();
+    </script>
+
+<!-- join() method -->
+<h2>join()</h2>
+<p>The join() method joins array elements into a string.</p>
+<p>In this example we have used " * " as a separator between the 
+    elements:
+</p>
+
+<p id="one"></p>
+
+<script>
+    const matunda = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById('one').innerHTML = matunda.join(" * ");
+</script>
+
+<!-- JavaScript Array pop() -->
+<!-- Removes the last item from an array -->
+<h2>pop()</h2>
+<p>The pop() method returns the value that was "popped out"</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+    const  vitamins = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById('demo1').innerHTML = vitamins.pop();
+    document.getElementById('demo2').innerHTML = vitamins;
+</script>
+
+<!-- Shifting Elements -->
+<!-- Removes 1st array element and shifts all the other to a lower index -->
+<h2>shift()</h2>
+<p>The shift() method returns the element that was shifted out.</p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+    const juice = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById('demo3').innerHTML = juice.shift();
+    document.getElementById('demo4').innerHTML = juice;
+</script>
+
+
+<!-- Unshift() Method -->
+<h2>unshift()</h2>
+<p>The unshift() method returns the length of the new array:</p>
+
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<script>
+    const onsale = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById('demo5').innerHTML = onsale.unshift("Lemon");
+    document.getElementById('demo6').innerHTML = onsale;
+</script>
+
+<!-- Merging(Concatenating) Arrays -->
+<h2>concat()</h2>
+<p>The concat() method merges (concatenates) arrays</p>
+
+<p id="two"></p>
+
+<script>
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myChildren = myGirls.concat(myBoys);
+
+    document.getElementById('two').innerHTML = myChildren;
+</script>
+
+<p><b>The concat() method merges (concatenates) arrays:</b></p>
+
+<p id="three"></p>
+
+<script>
+    const array1 = ["Cecilie","Lone"];
+    const array2 = ["Emil", "Tobias","Linus"];
+    const array3 = ["Robin","Morgan"];
+
+    const mykids = array1.concat(array2, array3);
+    
+    document.getElementById('three').innerHTML = mykids;
+</script>
+
+<p><b>The concat() method merge string values to arrays:</b></p>
+
+<p id="four"></p>
+
+<script>
+    const myArray = ["Emil", "Tobias", "Linus"];
+    const kids = myArray.concat("Peter");
+    document.getElementById('four').innerHTML = kids;
+
+</script>
+
+</body>
+</html>
